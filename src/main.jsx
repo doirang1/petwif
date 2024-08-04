@@ -32,8 +32,14 @@ const router = createBrowserRouter([
         element: <ExplorePage />,
       },
       {
-        path: '/album/:userId',
+        path: '/album',
         element: <AlbumPage />,
+        children: [
+          {
+            path: ':userId',
+            element: <AlbumPage />,
+          },
+        ],
       },
       {
         path: '/album/detail/:albumId',
