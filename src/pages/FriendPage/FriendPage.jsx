@@ -1,3 +1,3 @@
 export default function FriendPage() {
-  return <main></main>;
+  return <main>FriendPage</main>;
 }

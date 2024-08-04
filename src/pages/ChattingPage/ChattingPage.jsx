@@ -1,3 +1,3 @@
 export default function ChattingPage() {
-  return <main></main>;
+  return <main>ChattingPage</main>;
 }
