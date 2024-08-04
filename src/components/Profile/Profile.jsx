@@ -1,11 +1,5 @@
-import styled from 'styled-components';
-
-const ProfileStyle = styled.img`
-  width: ${(props) => props.$size || '55px'};
-  height: ${(props) => props.$size || '55px'};
-  border-radius: 100%;
-`;
+import * as S from './Profile.style.jsx';
 
 export default function Profile({ src, size }) {
-  return <ProfileStyle src={src} $size={size} />;
+  return <S.Profile src={src} $size={size} />;
 }
