@@ -3,6 +3,8 @@ import { useLocation, Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
+import { Button } from '../Button';
+import { Flex } from '../Common';
 import { Icon } from '../Icon';
 
 import { SIDE_MENUS } from '../../constants';
@@ -15,6 +17,14 @@ const SidebarStyle = styled.aside`
   left: 0;
   background: #f3f4f6;
   filter: drop-shadow(3px 3px 9px rgba(0, 0, 0, 0.1));
+`;
+
+const Wrapper = styled(Flex)`
+  height: 100%;
+`;
+
+const Menus = styled.ul`
+  width: 100%;
 `;
 
 const Menu = styled.li`
@@ -37,12 +47,31 @@ const Menu = styled.li`
   }
 `;
 
+const Padding = styled.div`
+  width: 100%;
+  padding: 20px;
+`;
+
 export default function Sidebar({ isOpen, close }) {
   const { pathname } = useLocation();
+  const [isLogin, setIsLogin] = useState();
+
+  // 사이드바 동작 확인을 위한 임시 기능
+  const login = () => {
+    localStorage.setItem('token', 'abcdefg');
+    setIsLogin(true);
+    console.log('로그인');
+  };
+  const logout = () => {
+    localStorage.removeItem('token');
+    setIsLogin(false);
+    console.log('로그아웃');
+  };
 
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('click', close);
+      setIsLogin(localStorage.getItem('token') ? true : false);
     }
 
     return () => document.removeEventListener('click', close);
@@ -54,16 +83,33 @@ export default function Sidebar({ isOpen, close }) {
 
   return (
     <SidebarStyle onClick={(event) => event.stopPropagation()}>
-      <ul>
-        {SIDE_MENUS.map(({ id, to, name, icon }) => (
-          <Link key={id} to={to}>
-            <Menu $selected={pathname.includes(id)}>
-              <Icon id={id} width={icon.width} height={icon.height} />
-              <span>{name}</span>
-            </Menu>
-          </Link>
-        ))}
-      </ul>
+      <Wrapper $direction='column'>
+        <Menus>
+          {SIDE_MENUS.map(({ id, to, name, icon }) => (
+            <Link key={id} to={to}>
+              <Menu $selected={pathname.includes(id)}>
+                <Icon id={id} width={icon.width} height={icon.height} />
+                <span>{name}</span>
+              </Menu>
+            </Link>
+          ))}
+        </Menus>
+        <Padding>
+          <Button
+            padding='18px'
+            onClick={() => {
+              if (isLogin) {
+                logout();
+              } else {
+                login();
+                console.log('로그인');
+              }
+            }}
+          >
+            {isLogin ? '로그아웃 ' : '로그인'}
+          </Button>
+        </Padding>
+      </Wrapper>
     </SidebarStyle>
   );
 }
