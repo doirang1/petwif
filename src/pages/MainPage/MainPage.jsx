@@ -1,3 +1,9 @@
+import { RandomFriend } from '../../components/RandomFriend';
+
 export default function MainPage() {
-  return <main>MainPage</main>;
+  return (
+    <main>
+      <RandomFriend />
+    </main>
+  );
 }

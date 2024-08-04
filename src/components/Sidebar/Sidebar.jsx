@@ -53,6 +53,7 @@ export default function Sidebar({ isOpen, close }) {
         <S.ButtonWrapper>
           <Button
             padding='18px'
+            borderRadius='5px'
             onClick={() => {
               if (isLogin) {
                 logout();

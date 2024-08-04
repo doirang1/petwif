@@ -1,6 +1,8 @@
 import * as S from './Button.style.jsx';
 
 export default function Button({
+  width,
+  borderRadius,
   fontSize,
   buttonStyle,
   hasBorder,
@@ -11,6 +13,8 @@ export default function Button({
 }) {
   return (
     <S.Button
+      $width={width}
+      $borderRadius={borderRadius}
       $fontSize={fontSize}
       $style={buttonStyle}
       $hasBorder={hasBorder}

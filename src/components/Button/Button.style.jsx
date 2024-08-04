@@ -22,10 +22,11 @@ export const Button = styled.button`
     `;
   }};
 
-  width: 100%;
-  border-radius: 10px;
+  width: ${(props) => props.$width || '100%'};
+  border-radius: ${(props) => props.$borderRadius || '10px'};
   font-weight: 600;
   line-height: 29px;
+  text-align: center;
   padding: ${(props) => `${props.$padding || 0} 0`};
   border: ${(props) =>
     props.$hasBorder && `1px solid ${props.theme.color.primary}`};
