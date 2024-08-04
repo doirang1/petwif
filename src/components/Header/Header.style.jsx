@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   padding: 15px 17px;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.color.white};
 `;
 
 export const MenuItem = styled(Link)`

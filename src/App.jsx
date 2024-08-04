@@ -1,13 +1,17 @@
 import { Outlet } from 'react-router-dom';
 
+import { ThemeProvider } from 'styled-components';
+
 import { Header } from './components/Header';
+
+import theme from './styles/theme';
 
 function App() {
   return (
-    <main>
+    <ThemeProvider theme={theme}>
       <Header />
       <Outlet />
-    </main>
+    </ThemeProvider>
   );
 }
 
