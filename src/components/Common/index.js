@@ -7,3 +7,8 @@ export const Flex = styled.div`
   align-items: center;
   gap: ${(props) => props.$gap || 'unset'};
 `;
+
+export const Layout = styled.div`
+  background: ${(props) => props.theme.color.white};
+  border-radius: 15px;
+`;
