@@ -6,7 +6,6 @@ export const HeaderContainer = styled.header`
   justify-content;
   background-color: #f5f5f5;
   height: 20%;
-  border: 2px solid red;
 `;
 
 export const LogoSection = styled.div`
@@ -16,6 +15,7 @@ export const LogoSection = styled.div`
   flex-direction: column;
   padding-left: 20px;
   justify-content: space-between;
+  border: 1px solid black;
 `;
 
 export const NavSection = styled.div`
@@ -25,7 +25,7 @@ export const NavSection = styled.div`
   align-items: center;
   padding: 10px 20px;
   background-color: #D9D9D9;
-  border: 2px solid red;
+  border: 1px solid black;
 `;
 
 export const NamingSection = styled.div`

@@ -7,6 +7,7 @@ export const SideContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid black;
 `;
 
 export const SelectContainer = styled.div`
@@ -16,7 +17,6 @@ export const SelectContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   margin-bottom: 20px;
-  space-between: 10px;
 `;
 
 export const Category = styled.div`
@@ -29,6 +29,13 @@ export const Category = styled.div`
   background-color: #fff;
   border: 1px solid #000;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    background-color: #e0e0e0;
+  }
 `;
 
 export const UploadSection = styled.div`
@@ -36,7 +43,11 @@ export const UploadSection = styled.div`
   height: 60%;
   padding: 10px;
   border: 1px dashed #000;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
   margin-bottom: 20px;
   background-color: #fff;
 `;
@@ -52,4 +63,11 @@ export const Button = styled.button`
 export const Paragraph = styled.p`
   font-weight: bold;
   font-size: 14px;
+`;
+
+export const Paragraph2 = styled.p`
+  font-weight: bold;
+  font-size: 20px;
+  color: #485BBD;
+
 `;
