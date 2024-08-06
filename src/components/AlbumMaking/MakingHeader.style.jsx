@@ -56,6 +56,22 @@ export const Button = styled.button`
   border-radius: 10px;
 `;
 
+export const ButtonBack = styled.button`
+  width: 10%;
+  height: 30%;
+  padding: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 10px;
+`;
+
 export const EditContainer = styled.div`
   width: 40%;
   height: 20%;

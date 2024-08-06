@@ -22,3 +22,11 @@ export const Description = styled.div`
   font-size: 14px;
   color: #555;
 `;
+
+export const CoverEditingSection = styled.div`
+  text-align: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+`;
