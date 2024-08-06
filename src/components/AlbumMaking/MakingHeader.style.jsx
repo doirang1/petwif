@@ -14,12 +14,6 @@ export const LogoSection = styled.div`
   padding-left: 20px;
 `;
 
-export const Logo = styled.div`
-  font-size: 40px;
-  font-weight: bold;
-  color: #F87F28;
-`;
-
 export const NavSection = styled.div`
   flex: 1;
   display: flex;

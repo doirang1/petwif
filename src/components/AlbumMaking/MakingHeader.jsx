@@ -1,11 +1,12 @@
 import React from 'react';
-import { HeaderContainer, LogoSection, Logo, NavSection } from './MakingHeader.style';
+import { HeaderContainer, LogoSection, NavSection } from './MakingHeader.style';
+import { Icon } from '../Icon';
 
 export default function MakingHeader() {
   return (
     <HeaderContainer>
       <LogoSection>
-        <Logo>PETWIF</Logo>
+        <Icon id="logo" width="284" height="40"/>
       </LogoSection>
       <NavSection>
       </NavSection>
