@@ -52,6 +52,41 @@ export const UploadSection = styled.div`
   background-color: #fff;
 `;
 
+export const SelectContainer2 = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const Category2 = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    background-color: #e0e0e0;
+  }
+`;
+
+export const Sticker = styled.div`
+  width: 100%;
+  height: 70%;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #000;
+`;
+
 export const Button = styled.button`
   width: 30%;
   padding: 10px;
