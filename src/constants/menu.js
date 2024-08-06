@@ -26,6 +26,12 @@ export const SIDE_MENUS = Object.freeze([
       height: 42,
     },
   },
+  { // 앨범 제작 페이지 이동용 임시 버튼
+    id: 'album-create',
+    to: '/album-create',
+    name: '앨범 제작(임시 버튼)',
+    icon: { width: 24, height: 24 },
+  },
   {
     id: 'friend',
     to: '/friend',
