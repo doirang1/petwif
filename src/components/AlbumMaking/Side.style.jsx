@@ -26,15 +26,12 @@ export const Category = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: ${props => props.isActive ? '#e0e0e0' : '#fff'};
   border: 1px solid #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #f0f0f0;
-  }
-  &:active {
-    background-color: #e0e0e0;
   }
 `;
 
@@ -67,7 +64,7 @@ export const Category2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: ${props => props.isActive ? '#e0e0e0' : '#fff'};
   border: 1px solid #000;
   cursor: pointer;
   transition: background-color 0.3s ease;

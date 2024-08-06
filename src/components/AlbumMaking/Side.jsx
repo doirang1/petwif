@@ -5,15 +5,16 @@ import { Icon } from '../Icon';
 
 export default function Side() {
   const { isPhotoSelected, isStickerSelected, isMineSelected, isMarketSelected, selectPhoto, selectSticker, selectMine, selectMarket } = useStore();
+  
 
   return (
     <SideContainer>
       <SelectContainer>
-        <Category onClick={selectPhoto}>
+        <Category isActive={isPhotoSelected} onClick={selectPhoto}>
           <Icon id="album" width="42" height="42"></Icon>
           <Paragraph>앨범</Paragraph>
         </Category>
-        <Category onClick={selectSticker}>
+        <Category isActive={isStickerSelected} onClick={selectSticker}>
           <Icon id="album" width="42" height="42"></Icon>
           <Paragraph>스티커</Paragraph>
         </Category>
@@ -32,10 +33,10 @@ export default function Side() {
       {isStickerSelected && (
         <>
           <SelectContainer2>
-            <Category2 onClick={selectMine}>
+            <Category2 isActive={isMineSelected} onClick={selectMine}>
               <Paragraph>내 스티커</Paragraph>
             </Category2>
-            <Category2 onClick={selectMarket}>
+            <Category2 isActive={isMarketSelected} onClick={selectMarket}>
               <Paragraph>스티커 마켓</Paragraph>
             </Category2>
           </SelectContainer2>
