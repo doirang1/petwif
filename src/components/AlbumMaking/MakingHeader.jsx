@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStore } from '../../store/store';
 import { HeaderContainer, LogoSection, EditSection, NamingSection, StyledIcon, Button, EditContainer, EditCategory, ButtonBack } from './MakingHeader.style';
+import MakingModal from './MakingModal';
 
 export default function MakingHeader() {
   const { isCoverEditing, startCoverEditing, stopCoverEditing } = useStore();
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <HeaderContainer>
       <LogoSection>
@@ -29,7 +34,8 @@ export default function MakingHeader() {
         {isCoverEditing ? (
           <>
             <ButtonBack onClick={stopCoverEditing}>뒤로 가기</ButtonBack>
-            <Button active>앨범 만들기</Button>
+            <Button onClick={openModal}>앨범 만들기</Button>
+            {isModalOpen && <MakingModal close={closeModal} />}
           </>
         ) : (
           <Button onClick={startCoverEditing}>표지 만들기</Button>
