@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '../../store/store';
-import { MainContainer, ImageContainer, Description, CoverEditingSection } from './MainArea.style';
+import { Button, MainContainer, Paragraph1, Paragraph2 } from './MainArea.style';
 
 export default function MainArea() {
   const { isCoverEditing } = useStore();
@@ -13,13 +13,13 @@ export default function MainArea() {
         </CoverEditingSection>
       ) : (
         <>
-          <ImageContainer>
-            <img src="path/to/your/image1.jpg" alt="Cat" />
-            <Description>01. 고양이 설명...</Description>
-          </ImageContainer>
-          <ImageContainer>
-            <img src="path/to/your/image2.jpg" alt="Cat" />
-          </ImageContainer>
+          <Paragraph1>
+            나만의 앨범을 만들어보세요:
+          </Paragraph1>
+          <Button>파일 선택</Button>
+          <Paragraph2>
+            혹은 사진을 드래그 앤 드롭
+          </Paragraph2>
         </>
       )}
       
