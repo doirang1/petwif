@@ -2,10 +2,16 @@ import styled from 'styled-components';
 
 import { Layout } from '../../../components/Common';
 
-export const Container = styled(Layout)`
+export const MainLayout = styled.div`
+  padding: 0 30px;
+  display: flex;
+  gap: 30px;
+`;
+
+export const MainContainer = styled(Layout)`
+  flex: 1;
   padding: 33px 0 16px 33px;
-  margin: 24px;
-  box-sizing: border-box;
+  overflow: hidden;
 `;
 
 export const MenuList = styled.div`
@@ -72,4 +78,11 @@ export const AlbumAmount = styled.div`
     font-size: 65px;
     line-height: 73px;
   }
+`;
+
+export const SideContainer = styled.div`
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
