@@ -17,7 +17,7 @@ export const SearchInput = styled.input`
   border-bottom: 1px solid transparent;
 
   &:focus {
-    border-color: ${(props) => props.theme.color.gray3};
+    border-color: ${(props) => props.theme.color.gray4};
   }
 
   &::-webkit-search-decoration,
