@@ -1,15 +1,15 @@
 import React from 'react';
 import { useStore } from '../../store/store';
-import { Button, MainContainer, Paragraph1, Paragraph2 } from './MainArea.style';
+import { Button, MainContainer, Paragraph1, Paragraph2, CoverEditingSection, EditCategory, EditContainer } from './MainArea.style';
 
 export default function MainArea() {
-  const { isCoverEditing } = useStore();
+  const { isCoverEditing, isTextEditing } = useStore();
 
   return (
     <MainContainer>
       {isCoverEditing ? (
         <CoverEditingSection>
-          <p>표지 만들기 페이지</p>
+          <p>표지꾸미기</p>
         </CoverEditingSection>
       ) : (
         <>
@@ -21,6 +21,21 @@ export default function MainArea() {
             혹은 사진을 드래그 앤 드롭
           </Paragraph2>
         </>
+      )}
+
+      {isTextEditing && (
+        <EditContainer>
+          <EditCategory>임</EditCategory>
+          <EditCategory>시</EditCategory>
+          <EditCategory>용</EditCategory>
+          <EditCategory>텍</EditCategory>
+          <EditCategory>스</EditCategory>
+          <EditCategory>트</EditCategory>
+          <EditCategory>편</EditCategory>
+          <EditCategory>집</EditCategory>
+          <EditCategory>기</EditCategory>
+          <EditCategory>임</EditCategory>
+        </EditContainer>
       )}
       
     </MainContainer>

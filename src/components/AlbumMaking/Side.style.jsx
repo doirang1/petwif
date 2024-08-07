@@ -2,32 +2,46 @@ import styled from 'styled-components';
 
 export const SideContainer = styled.div`
   width: 30%;
-  background-color: #D9D9D9;
+  max-height: 100vh;
+  background-color: #F3F4F6;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  overflow-y: auto;
 `;
 
-export const SelectContainer = styled.div`
+export const EditSelectContainer = styled.div`
   width: 100%;
-  height: 12%;
+  height: 40%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+`;
+
+export const SelectTitleContainer = styled.div`
+  width: 100%;
+  height: 20%;
+  background: #FFF8EC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
 `;
 
 export const Category = styled.div`
   width: 50%;
-  height: 100%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.isActive ? '#e0e0e0' : '#fff'};
-  border: 1px solid #000;
+  border: 1px dashed #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -35,26 +49,16 @@ export const Category = styled.div`
   }
 `;
 
-export const UploadSection = styled.div`
-  width: 90%;
-  height: 60%;
-  padding: 10px;
-  border: 1px dashed #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  margin-bottom: 20px;
-  background-color: #fff;
-`;
-
 export const SelectContainer2 = styled.div`
-  width: 100%;
-  height: 10%;
+  width: 90%;
+  height: 20%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  background: #F3F4F6;
 `;
 
 export const Category2 = styled.div`
@@ -64,8 +68,8 @@ export const Category2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.isActive ? '#e0e0e0' : '#fff'};
-  border: 1px solid #000;
+  background-color: ${props => props.isActive ? '#fff' : '#F3F4F6'};
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -77,19 +81,95 @@ export const Category2 = styled.div`
 `;
 
 export const Sticker = styled.div`
-  width: 100%;
-  height: 70%;
+  width: 90%;
+  height: auto;
   display: flex;
+  flex-wrap: wrap;
   background-color: #fff;
-  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 `;
 
-export const Button = styled.button`
-  width: 30%;
-  padding: 10px;
+export const StickerContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: #fff;
-  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10%;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  overflow-y: auto;
+`;
+
+export const StickerTitleContainer = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+`;
+
+export const CloseButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 1.5rem;
   cursor: pointer;
+`;
+
+export const Button1 = styled.button`
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: ${props => props.isActive ? '#FFBA76' : '#F87F28'};
+&:hover {
+  background-color: #FFBA76;
+}
+`;
+
+export const Button2 = styled.button`
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  color: #F87F28;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 3%;
+  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
+&:hover {
+  background-color: #FFDCB6;
+}
+`;
+
+export const ButtonBack = styled.button`
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  border-radius: 10px;
+  color: #F87F28;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 3%;
+  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
+&:hover {
+  background-color: #FFDCB6;
+}
 `;
 
 export const Paragraph = styled.p`
@@ -100,6 +180,11 @@ export const Paragraph = styled.p`
 export const Paragraph2 = styled.p`
   font-weight: bold;
   font-size: 20px;
-  color: #485BBD;
+`;
 
+export const Emoticon = styled.div`
+  flex-basis: calc(33.33% - 10px);
+  height: 90px;
+  background: #F3F4F6;
+  border-radius: 10px;
 `;

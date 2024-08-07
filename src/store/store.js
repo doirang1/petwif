@@ -1,16 +1,16 @@
 import create from 'zustand';
 
 export const useStore = create((set) => ({
-  isPhotoSelected: true,
   isStickerSelected: false,
   isMineSelected: true,
   isMarketSelected: false,
   isCoverEditing: false,
-  selectPhoto: () => set({ isPhotoSelected: true, isStickerSelected: false }),
-  selectSticker: () => set({ isPhotoSelected: false, isStickerSelected: true }),
+  isTextEditing: false,
+  selectSticker: () => set((state) => ({ isStickerSelected: !state.isStickerSelected })),
   selectMine: () => set({ isMineSelected: true, isMarketSelected: false }),
   selectMarket: () => set({ isMineSelected: false, isMarketSelected: true }),
   startCoverEditing: () => set({ isCoverEditing: true }),
   stopCoverEditing: () => set({ isCoverEditing: false }),
+  toggleTextEditing: () => set((state) => ({ isTextEditing: !state.isTextEditing })), // 텍스트 편집 상태 토글
   resetSelection: () => set({ isPhotoSelected: false, isStickerSelected: false }),
 }));

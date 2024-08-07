@@ -11,6 +11,7 @@ export const MainContainer = styled.main`
   gap: 10%;
   background: #FFFFFF;
   border-radius: 10px;
+  position: relative;
 `;
 
 export const CoverEditingSection = styled.div`
@@ -35,10 +36,43 @@ export const Button = styled.button`
   width: 30%;
   height: 10%;
   padding: 10px;
-  background-color: #FFF0D4;
   border: 1px solid #F87F28;
   border-radius: 10px;
   color: #F87F28;
   font-size: 20px;
   cursor: pointer;
+  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
+&:hover {
+  background-color: #FFDCB6;
+}
+`;
+
+export const EditContainer = styled.div`
+  width: 95%;
+  height: 5%;
+  position: absolute;
+  top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+`;
+
+export const EditCategory = styled.div`
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    background-color: #e0e0e0;
+  }
 `;

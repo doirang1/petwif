@@ -7,6 +7,6 @@ export const PageContainer = styled.div`
   height: 100vh;
   background: #F3F4F6;
   padding: 10px;
-  gap: 5%;
+  gap: 2%;
   margin-top: 0px;
 `;
