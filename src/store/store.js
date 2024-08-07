@@ -11,6 +11,6 @@ export const useStore = create((set) => ({
   selectMarket: () => set({ isMineSelected: false, isMarketSelected: true }),
   startCoverEditing: () => set({ isCoverEditing: true }),
   stopCoverEditing: () => set({ isCoverEditing: false }),
-  toggleTextEditing: () => set((state) => ({ isTextEditing: !state.isTextEditing })), // 텍스트 편집 상태 토글
+  toggleTextEditing: () => set((state) => ({ isTextEditing: !state.isTextEditing })),
   resetSelection: () => set({ isPhotoSelected: false, isStickerSelected: false }),
 }));
