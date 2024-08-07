@@ -12,6 +12,7 @@ export const Select = styled.div`
   border: 1px solid ${(props) => props.theme.color.gray2};
   outline: none;
   border-radius: 5px;
+  position: relative;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   cursor: pointer;
 
@@ -23,10 +24,14 @@ export const Select = styled.div`
 `;
 
 export const OptionList = styled.ul`
+  width: 100%;
   margin-top: 10px;
   display: ${(props) => (props.$show ? 'block' : 'none')};
   background-color: ${(props) => props.theme.color.white};
   border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.15));
 
   font-weight: 500;
