@@ -48,8 +48,6 @@ export const AlbumCover = styled.div`
   background: #e0e0e0;
 `;
 
-
-
 export const Albumcontexts = styled.div`
   width: 65%;
   padding: 20px;
@@ -58,8 +56,6 @@ export const Albumcontexts = styled.div`
   gap: 15px;
   position: relative;
 `;
-
-
 
 export const Input = styled.input`
   width: 100%;
@@ -80,7 +76,7 @@ export const TextArea = styled.textarea`
 
 export const RadioGroup = styled.div`
   display: flex;
-  justify-content: flex-start;;
+  justify-content: flex-start;
   padding: 10px 0;
   gap: 20px;
 
@@ -121,6 +117,6 @@ export const CancelButton = styled(Button)`
 `;
 
 export const B = styled.div`
- font-size: 20px;
- font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 `;

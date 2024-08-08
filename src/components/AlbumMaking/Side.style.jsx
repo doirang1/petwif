@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SideContainer = styled.div`
   width: 30%;
   max-height: 100vh;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const EditSelectContainer = styled.div`
 export const SelectTitleContainer = styled.div`
   width: 100%;
   height: 20%;
-  background: #FFF8EC;
+  background: #fff8ec;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -40,7 +40,7 @@ export const Category = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.isActive ? '#e0e0e0' : '#fff'};
+  background-color: ${(props) => (props.isActive ? '#e0e0e0' : '#fff')};
   border: 1px dashed #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -58,7 +58,7 @@ export const SelectContainer2 = styled.div`
   align-items: center;
   border-radius: 5px;
   padding: 5px;
-  background: #F3F4F6;
+  background: #f3f4f6;
 `;
 
 export const Category2 = styled.div`
@@ -68,7 +68,7 @@ export const Category2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.isActive ? '#fff' : '#F3F4F6'};
+  background-color: ${(props) => (props.isActive ? '#fff' : '#F3F4F6')};
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -130,14 +130,14 @@ export const Button1 = styled.button`
   height: 10%;
   padding: 10px;
   border-radius: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  background-color: ${props => props.isActive ? '#FFBA76' : '#F87F28'};
-&:hover {
-  background-color: #FFBA76;
-}
+  background-color: ${(props) => (props.isActive ? '#FFBA76' : '#F87F28')};
+  &:hover {
+    background-color: #ffba76;
+  }
 `;
 
 export const Button2 = styled.button`
@@ -145,15 +145,15 @@ export const Button2 = styled.button`
   height: 10%;
   padding: 10px;
   border-radius: 10px;
-  color: #F87F28;
+  color: #f87f28;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   margin-top: 3%;
-  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
-&:hover {
-  background-color: #FFDCB6;
-}
+  background-color: ${(props) => (props.isActive ? '#FFDCB6' : '#FFF0D4')};
+  &:hover {
+    background-color: #ffdcb6;
+  }
 `;
 
 export const ButtonBack = styled.button`
@@ -161,15 +161,15 @@ export const ButtonBack = styled.button`
   height: 10%;
   padding: 10px;
   border-radius: 10px;
-  color: #F87F28;
+  color: #f87f28;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   margin-top: 3%;
-  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
-&:hover {
-  background-color: #FFDCB6;
-}
+  background-color: ${(props) => (props.isActive ? '#FFDCB6' : '#FFF0D4')};
+  &:hover {
+    background-color: #ffdcb6;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -185,6 +185,6 @@ export const Paragraph2 = styled.p`
 export const Emoticon = styled.div`
   flex-basis: calc(33.33% - 10px);
   height: 90px;
-  background: #F3F4F6;
+  background: #f3f4f6;
   border-radius: 10px;
 `;

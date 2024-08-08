@@ -1,6 +1,14 @@
 import React from 'react';
 import { useStore } from '../../store/store';
-import { Button, MainContainer, Paragraph1, Paragraph2, CoverEditingSection, EditCategory, EditContainer } from './MainArea.style';
+import {
+  Button,
+  MainContainer,
+  Paragraph1,
+  Paragraph2,
+  CoverEditingSection,
+  EditCategory,
+  EditContainer,
+} from './MainArea.style';
 
 export default function MainArea() {
   const { isCoverEditing, isTextEditing } = useStore();
@@ -13,13 +21,9 @@ export default function MainArea() {
         </CoverEditingSection>
       ) : (
         <>
-          <Paragraph1>
-            나만의 앨범을 만들어보세요:
-          </Paragraph1>
+          <Paragraph1>나만의 앨범을 만들어보세요:</Paragraph1>
           <Button>파일 선택</Button>
-          <Paragraph2>
-            혹은 사진을 드래그 앤 드롭
-          </Paragraph2>
+          <Paragraph2>혹은 사진을 드래그 앤 드롭</Paragraph2>
         </>
       )}
 
@@ -37,7 +41,6 @@ export default function MainArea() {
           <EditCategory>임</EditCategory>
         </EditContainer>
       )}
-      
     </MainContainer>
   );
 }

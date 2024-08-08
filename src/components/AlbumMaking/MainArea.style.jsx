@@ -9,7 +9,7 @@ export const MainContainer = styled.main`
   align-items: center;
   justify-content: center;
   gap: 10%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 10px;
   position: relative;
 `;
@@ -36,15 +36,15 @@ export const Button = styled.button`
   width: 30%;
   height: 10%;
   padding: 10px;
-  border: 1px solid #F87F28;
+  border: 1px solid #f87f28;
   border-radius: 10px;
-  color: #F87F28;
+  color: #f87f28;
   font-size: 20px;
   cursor: pointer;
-  background-color: ${props => props.isActive ? '#FFDCB6' : '#FFF0D4'};
-&:hover {
-  background-color: #FFDCB6;
-}
+  background-color: ${(props) => (props.isActive ? '#FFDCB6' : '#FFF0D4')};
+  &:hover {
+    background-color: #ffdcb6;
+  }
 `;
 
 export const EditContainer = styled.div`
