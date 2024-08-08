@@ -70,7 +70,7 @@ export const Category = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => (props.isActive ? '#e0e0e0' : '#fff')};
+  background-color: ${(props) => (props.$isActive ? '#e0e0e0' : '#fff')};
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -157,7 +157,7 @@ export const Category2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => (props.isActive ? '#fff' : '#F3F4F6')};
+  background-color: ${(props) => (props.$isActive ? '#fff' : '#F3F4F6')};
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -198,7 +198,7 @@ export const Button1 = styled.button`
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  background-color: ${(props) => (props.isActive ? '#FFBA76' : '#F87F28')};
+  background-color: ${(props) => (props.$isActive ? '#FFBA76' : '#F87F28')};
   &:hover {
     background-color: #ffba76;
   }
@@ -214,7 +214,7 @@ export const Button2 = styled.button`
   font-size: 16px;
   cursor: pointer;
   margin-top: 3%;
-  background-color: ${(props) => (props.isActive ? '#FFDCB6' : '#FFF0D4')};
+  background-color: ${(props) => (props.$isActive ? '#FFDCB6' : '#FFF0D4')};
   &:hover {
     background-color: #ffdcb6;
   }
@@ -230,7 +230,7 @@ export const ButtonBack = styled.button`
   font-size: 16px;
   cursor: pointer;
   margin-top: 3%;
-  background-color: ${(props) => (props.isActive ? '#FFDCB6' : '#FFF0D4')};
+  background-color: ${(props) => (props.$isActive ? '#FFDCB6' : '#FFF0D4')};
   &:hover {
     background-color: #ffdcb6;
   }

@@ -5,39 +5,76 @@ import {
   MainContainer,
   Paragraph1,
   Paragraph2,
-  CoverEditingSection,
-  EditCategory,
-  EditContainer,
   MainTitleContainer,
   MainContnetContainer,
+  ToolbarContainer,
+  ToolbarItem,
+  InputField,
+  StyledSelect,
+  StyledOption,
 } from './MainArea.style';
+
+import { Icon } from '../Icon';
 
 export default function MainArea() {
   const { isCoverEditing, isTextEditing } = useStore();
 
   return (
-    <MainContainer>
-      <MainTitleContainer>
+    <MainContainer $isCoverEditing={isCoverEditing}>
+      <MainTitleContainer $isCoverEditing={isCoverEditing}>
         {isTextEditing && (
-          <EditContainer>
-            <EditCategory>임</EditCategory>
-            <EditCategory>시</EditCategory>
-            <EditCategory>용</EditCategory>
-            <EditCategory>텍</EditCategory>
-            <EditCategory>스</EditCategory>
-            <EditCategory>트</EditCategory>
-            <EditCategory>편</EditCategory>
-            <EditCategory>집</EditCategory>
-            <EditCategory>기</EditCategory>
-            <EditCategory>임</EditCategory>
-          </EditContainer>
+          <>
+            <ToolbarContainer>
+              <ToolbarItem>
+                <StyledSelect>
+                  <StyledOption>단락</StyledOption>
+                </StyledSelect>
+              </ToolbarItem>
+              <ToolbarItem>
+                <StyledSelect>
+                  <StyledOption>Helvetica</StyledOption>
+                </StyledSelect>
+              </ToolbarItem>
+              <ToolbarItem>
+                <StyledSelect>
+                  <StyledOption>20</StyledOption>
+                  <StyledOption>18</StyledOption>
+                </StyledSelect>
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textbold' width='24' height='24' />
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textitalic' width='19' height='19' />
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textunderline' width='24' height='24' />
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textleft' width='24' height='24' />
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textcenter' width='24' height='24' />
+              </ToolbarItem>
+              <ToolbarItem>
+                <Icon id='textright' width='24' height='24' />
+              </ToolbarItem>
+            </ToolbarContainer>
+            <InputField placeholder='여기에 텍스트 입력...' />
+          </>
         )}
       </MainTitleContainer>
-      <MainContnetContainer>
+      <MainContnetContainer $isCoverEditing={isCoverEditing}>
         {isCoverEditing ? (
-          <CoverEditingSection>
-            <p>표지꾸미기</p>
-          </CoverEditingSection>
+          <>
+            <Paragraph1 $isCoverEditing={isCoverEditing}>
+              표지를 만들어보세요:
+            </Paragraph1>
+            <Button $isCoverEditing={isCoverEditing}>파일 선택</Button>
+            <Paragraph2 $isCoverEditing={isCoverEditing}>
+              혹은 사진을 드래그 앤 드롭
+            </Paragraph2>
+          </>
         ) : (
           <>
             <Paragraph1>나만의 앨범을 만들어보세요:</Paragraph1>

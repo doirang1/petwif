@@ -56,11 +56,11 @@ export default function Side() {
             <Icon id='editPic' width='42' height='42'></Icon>
             <Paragraph>사진 추가</Paragraph>
           </Category>
-          <Category isActive={isTextEditing} onClick={toggleTextEditing}>
+          <Category $isActive={isTextEditing} onClick={toggleTextEditing}>
             <Icon id='editText' width='42' height='42'></Icon>
             <Paragraph>텍스트 편집</Paragraph>
           </Category>
-          <Category isActive={isStickerSelected} onClick={selectSticker}>
+          <Category $isActive={isStickerSelected} onClick={selectSticker}>
             <Icon id='editSticker' width='42' height='42'></Icon>
             <Paragraph>스티커 꾸미기</Paragraph>
           </Category>
@@ -83,10 +83,10 @@ export default function Side() {
               </StickerTitleContainer>
               <StickerSelectContainer>
                 <StickerSelectSection>
-                  <Category2 isActive={isMineSelected} onClick={selectMine}>
+                  <Category2 $isActive={isMineSelected} onClick={selectMine}>
                     <Paragraph>내 스티커</Paragraph>
                   </Category2>
-                  <Category2 isActive={isMarketSelected} onClick={selectMarket}>
+                  <Category2 $isActive={isMarketSelected} onClick={selectMarket}>
                     <Paragraph>스티커 상점</Paragraph>
                   </Category2>
                 </StickerSelectSection>

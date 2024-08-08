@@ -42,7 +42,6 @@ export const AlbumHeader = styled.div`
 export const AlbumCover = styled.div`
   width: 100%;
   height: 100%;
-  background: url('path/to/your/image.jpg') no-repeat center center/cover;
   border-radius: 10px;
   margin-bottom: 20px;
   background: #e0e0e0;
