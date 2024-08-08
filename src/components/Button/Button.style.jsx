@@ -11,7 +11,7 @@ export const Button = styled.button`
 
     if (props.$style === 'gray') {
       return css`
-        background-color: ${props.theme.color.gray4};
+        background-color: ${props.theme.color.gray5};
         color: ${props.theme.color.gray};
       `;
     }
@@ -33,7 +33,7 @@ export const Button = styled.button`
   font-size: ${(props) => props.$fontSize || '16px'};
 
   &:disabled {
-    background: ${(props) => props.theme.color.gray3};
+    background: ${(props) => props.theme.color.gray4};
     color: ${(props) => props.theme.color.gray2};
     cursor: auto;
   }
