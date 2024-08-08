@@ -11,7 +11,6 @@ export const MainContainer = styled.main`
   gap: 10%;
   background: #ffffff;
   border-radius: 10px;
-  position: relative;
 `;
 
 export const CoverEditingSection = styled.div`
