@@ -4,25 +4,55 @@ export const SideContainer = styled.div`
   width: 30%;
   max-height: 100vh;
   background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const SideSection1 = styled.div`
+  width: 100%;
+  height: 35%;
+  background-color: #f3f4f6;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
+  justify-content: center;
+`;
+
+export const SideSection2 = styled.div`
+  width: 100%;
+  height: 50%;
+  background-color: #f3f4f6;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SideSection3 = styled.div`
+  width: 100%;
+  height: 15%;
+  background-color: #f3f4f6;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const EditSelectContainer = styled.div`
   width: 100%;
-  height: 40%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px;
   background-color: #fff;
   border-radius: 10px;
 `;
 
-export const SelectTitleContainer = styled.div`
+export const EditTitleContainer = styled.div`
   width: 100%;
   height: 20%;
   background: #fff8ec;
@@ -70,9 +100,47 @@ export const Category = styled.div`
   }
 `;
 
-export const SelectContainer2 = styled.div`
-  width: 90%;
+export const StickerContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+`;
+
+export const StickerTitleContainer = styled.div`
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+`;
+
+export const StickerSelectContainer = styled.div`
+  width: 100%;
   height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+`;
+export const StickerSContainer = styled.div`
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+`;
+
+export const StickerSelectSection = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,41 +170,16 @@ export const Category2 = styled.div`
 `;
 
 export const Sticker = styled.div`
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: #fff;
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
-  margin-bottom: 10px;
-  flex-shrink: 0;
-`;
-
-export const StickerContainer = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  gap: 10%;
-  margin-bottom: 20px;
-  flex-shrink: 0;
   overflow-y: auto;
-`;
-
-export const StickerTitleContainer = styled.div`
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
 `;
 
 export const CloseButton = styled.button`
@@ -148,7 +191,7 @@ export const CloseButton = styled.button`
 
 export const Button1 = styled.button`
   width: 100%;
-  height: 10%;
+  height: 50%;
   padding: 10px;
   border-radius: 10px;
   color: #ffffff;
@@ -163,7 +206,7 @@ export const Button1 = styled.button`
 
 export const Button2 = styled.button`
   width: 100%;
-  height: 10%;
+  height: 50%;
   padding: 10px;
   border-radius: 10px;
   color: #f87f28;
@@ -179,7 +222,7 @@ export const Button2 = styled.button`
 
 export const ButtonBack = styled.button`
   width: 100%;
-  height: 10%;
+  height: 50%;
   padding: 10px;
   border-radius: 10px;
   color: #f87f28;
@@ -204,8 +247,8 @@ export const Paragraph2 = styled.p`
 `;
 
 export const Emoticon = styled.div`
-  flex-basis: calc(33.33% - 10px);
-  height: 90px;
+  width: 105px;
+  height: 105px;
   background: #f3f4f6;
   border-radius: 10px;
 `;
