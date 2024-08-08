@@ -3,12 +3,10 @@ import styled from 'styled-components';
 export const MainContainer = styled.main`
   flex: 1;
   width: 70%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10%;
   background: #ffffff;
   border-radius: 10px;
 `;
@@ -46,15 +44,33 @@ export const Button = styled.button`
   }
 `;
 
+export const MainTitleContainer = styled.div`
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-itmes: center;
+`;
+
+export const MainContnetContainer = styled.div`
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  overflow-y: auto;
+`;
+
 export const EditContainer = styled.div`
   width: 95%;
-  height: 5%;
-  position: absolute;
+  height: 100%;
   top: 5%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 20px;
   border: 1px solid #000;
 `;
 

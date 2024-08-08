@@ -5,11 +5,9 @@ import { PageContainer } from './AlbumMakingPage.style';
 
 export default function AlbumMakingPage() {
   return (
-    <main>
-      <PageContainer>
-        <MainArea />
-        <Side />
-      </PageContainer>
-    </main>
+    <PageContainer>
+      <MainArea />
+      <Side />
+    </PageContainer>
   );
 }

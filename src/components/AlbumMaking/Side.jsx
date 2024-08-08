@@ -32,6 +32,7 @@ export default function Side() {
     isCoverEditing,
     startCoverEditing,
     stopCoverEditing,
+    isTextEditing,
     toggleTextEditing,
   } = useStore();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,7 +50,7 @@ export default function Side() {
           <Icon id='editPic' width='42' height='42'></Icon>
           <Paragraph>사진 추가</Paragraph>
         </Category>
-        <Category onClick={toggleTextEditing}>
+        <Category isActive={isTextEditing} onClick={toggleTextEditing}>
           <Icon id='editText' width='42' height='42'></Icon>
           <Paragraph>텍스트 편집</Paragraph>
         </Category>

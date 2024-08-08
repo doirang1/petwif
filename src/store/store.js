@@ -14,6 +14,4 @@ export const useStore = create((set) => ({
   stopCoverEditing: () => set({ isCoverEditing: false }),
   toggleTextEditing: () =>
     set((state) => ({ isTextEditing: !state.isTextEditing })),
-  resetSelection: () =>
-    set({ isPhotoSelected: false, isStickerSelected: false }),
 }));
