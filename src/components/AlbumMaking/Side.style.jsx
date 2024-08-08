@@ -29,7 +29,7 @@ export const SelectTitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px 10px 0 0;
 `;
 
