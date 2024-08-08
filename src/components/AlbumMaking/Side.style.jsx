@@ -41,11 +41,32 @@ export const Category = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (props.isActive ? '#e0e0e0' : '#fff')};
-  border: 1px dashed #000;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #f0f0f0;
+  }
+
+  &:nth-child(2) {
+    border-bottom: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb;
+  }
+
+  &:nth-child(3) {
+    border-bottom: 1px solid #cbcbcb;
+    border-left: 1px solid #cbcbcb;
+  }
+
+  &:nth-child(4) {
+    border-top: 1px solid #cbcbcb;
+    border-right: 1px solid #cbcbcb;
+    border-radius: 0px 0px 0px 10px;
+  }
+
+  &:nth-child(5) {
+    border-top: 1px solid #cbcbcb;
+    border-left: 1px solid #cbcbcb;
+    border-radius: 0px 0px 10px 0px;
   }
 `;
 
