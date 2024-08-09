@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
+
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
 
 import * as S from './PwdSearchPage.style.jsx';
 
@@ -46,19 +48,14 @@ export default function PwdSearchPage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                     <S.FormWrapper>
-                        <S.TitleContainer>
-                            <Link to={'/login'}>
-                                <Icon id='back' width='35px' height='35px' />
-                            </Link>
-                            <S.TitleText>비밀번호 찾기</S.TitleText> 
-                            <S.Spacer />
-                        </S.TitleContainer>
+                        <TitleContainer
+                            backIcon='true'
+                            titleText='비밀번호 찾기'
+                        />
                         <S.FormContainer onSubmit={handleSubmit}>
                             <S.InputWrapper>
                                 <S.InputContainer>

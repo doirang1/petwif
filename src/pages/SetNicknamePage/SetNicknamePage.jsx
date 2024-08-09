@@ -6,6 +6,9 @@ import { Profile } from '../../components/Profile';
 
 import { Profile as Img } from '../../dummy/images';
 
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import * as S from './SetNicknamePage.style.jsx';
 
 export default function SetNicknamePage() {
@@ -16,19 +19,14 @@ export default function SetNicknamePage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                     <S.FormWrapper>
-                        <S.TitleContainer>
-                            <Link to={'/login'}>
-                                <Icon id='back' width='35px' height='35px' />
-                            </Link>
-                            <S.TitleText>프로필</S.TitleText> 
-                            <S.Spacer />
-                        </S.TitleContainer>
+                        <TitleContainer
+                        backIcon='true'
+                        titleText='프로필'
+                        />
                         <Profile src={Img} size='212px' />
                         <S.FormContainer onSubmit={handleSubmit}>
                             <S.MainBoldText>닉네임</S.MainBoldText>

@@ -4,14 +4,6 @@ import styled from 'styled-components';
 
 import { Flex } from '../../components/Common';
 
-export const Header = styled(Flex)` 
-  height: 95px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.theme.color.white};
-  border: 1px solid  ${(props) => props.theme.color.gray3};
-`;
 
 // 페이지 전체
 export const Wrapper = styled(Flex)` 
@@ -100,35 +92,12 @@ export const InputStyle = styled.input`
   background: ${(props) => props.theme.color.gray4};
 `;
 
-// back 아이콘과 TitleText, Spacer를 묶는 컨테이너
-export const TitleContainer = styled.div` 
-  width: 100%;
-  gap: 0 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
 // 구분선 스타일링
 export const StyledHr = styled.hr`
   width: 100%;
   height: 1px;
   background-color: ${(props) => props.theme.color.gray2};
   border: none;
-`;
-
-// TitleContainer 정렬을 위한 스페이서
-export const Spacer = styled.div`
-  width: 35px;
-  height: 35px;
-  flex: 0 0 auto;
-`;
-
-// 상단의 제목 텍스트
-export const TitleText = styled.span`
-  font-weight: 600;
-  font-size: 25px;
-  align: center;
 `;
 
 // input label과 같이 올라가는 두꺼운 텍스트

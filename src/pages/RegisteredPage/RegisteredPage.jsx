@@ -6,6 +6,9 @@ import { Profile } from '../../components/Profile';
 
 import { Profile as Img } from '../../dummy/images';
 
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import * as S from './RegisteredPage.style.jsx';
 
 const nickname = '펫위프';
@@ -14,13 +17,13 @@ const nickname = '펫위프';
 export default function RegisteredPage() {
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                 <S.FormWrapper>
-                    <S.TitleText>회원 가입 완료</S.TitleText>
+                    <TitleContainer
+                        titleText='회원가입 완료'
+                    />
                         <Profile src={Img} size='212px' />
                         <S.MainBoldText>{ nickname } 님</S.MainBoldText>
                     <S.StyledHr />

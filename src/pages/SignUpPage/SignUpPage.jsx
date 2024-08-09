@@ -5,6 +5,9 @@ import { Icon } from '../../components/Icon';
 
 import useModal from '../../hooks/useModal.jsx';
 
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import * as S from './SignUpPage.style.jsx';
 
 // 추후 유효성 검사 통과 여부에 따라 글씨 바뀌도록 설정 필요
@@ -18,24 +21,14 @@ export default function SignUpPage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                     <S.FormWrapper>
-                        <S.TitleContainer>
-                            <Icon 
-                                id='back' 
-                                width='35px' 
-                                height='35px' 
-                                onClick={open}
-                            />
-                            {/* 모달 버튼 개수, 아이콘 추가 수정 필요 */}
-                            {isOpen && <Modal text='회원가입이 아직 진행 중이에요. 로그인 화면으로 돌아가시겠어요?' close={close} />}
-                            <S.TitleText>회원 가입</S.TitleText> 
-                            <S.Spacer />
-                        </S.TitleContainer>
+                        <TitleContainer
+                            backIcon='true'
+                            titleText='회원 가입'
+                        />
                         <S.FormContainer onSubmit={handleSubmit}>
                             <S.InputWrapper>
                                 <S.InputContainer>

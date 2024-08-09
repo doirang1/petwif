@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Icon } from '../../components/Icon';
 
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import Service from './Term/Service.jsx';
 import Privacy from './Term/Privacy.jsx';
 
@@ -17,19 +20,14 @@ export default function AgreePage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                 <S.FormWrapper>
-                    <S.TitleContainer>
-                        <Link to={'/login'}>
-                            <Icon id='back' width='35px' height='35px' />
-                        </Link>
-                        <S.TitleText>이용 약관</S.TitleText> 
-                        <S.Spacer />
-                        </S.TitleContainer>
+                    <TitleContainer
+                    backIcon='true'
+                    titleText='이용 약관'
+                    />
                     <S.ExplainContainer>
                         <S.MainBoldText>서비스 이용을 위해 약관에 동의해 주세요.</S.MainBoldText>
                         <S.MainNormalText>서비스 항목에 동의하지 않으시면 서비스 이용에 제한이 생길 수 있습니다.</S.MainNormalText>

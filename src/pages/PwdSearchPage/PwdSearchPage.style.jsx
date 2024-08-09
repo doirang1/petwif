@@ -34,27 +34,6 @@ export const Container = styled.div`
   background: ${(props) => props.theme.color.white};
 `;
 
-export const TitleContainer = styled.div` 
-  width: 100%;
-  gap: 0 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
-export const Spacer = styled.div`
-  width: 35px;
-  height: 35px;
-  flex: 0 0 auto;
-`;
-
-// 상단의 제목 텍스트
-export const TitleText = styled.span`
-  font-weight: 600;
-  font-size: 25px;
-  align: center;
-`;
-
 // input label과 같이 올라가는 두꺼운 텍스트
 export const MainBoldText = styled.p`
   font-weight: 600;

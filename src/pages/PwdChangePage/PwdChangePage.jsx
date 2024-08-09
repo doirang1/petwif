@@ -3,6 +3,9 @@ import { Icon } from '../../components/Icon';
 
 import useModal from '../../hooks/useModal.jsx';
 
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import * as S from './PwdChangePage.style.jsx';
 
 
@@ -16,15 +19,13 @@ export default function PwdChangePage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                     <S.FormWrapper>
-                    <S.TitleContainer>
-                        <S.TitleText>비밀번호 변경하기</S.TitleText> 
-                    </S.TitleContainer>
+                    <TitleContainer
+                        titleText='비밀번호 변경하기'
+                    />
                     <S.FormContainer onSubmit={handleSubmit}>
                         <S.InputWrapper>
                         <S.InputContainer>
@@ -53,8 +54,6 @@ export default function PwdChangePage() {
                         buttonStyle='gray'
                         onClick={open}>
                         비밀번호 변경하기
-                        {/* 모달 버튼 클릭시 로그인 화면으로 이동하도록 해야 함 */}
-                        {isOpen && <Modal text='비밀번호가 변경되었어요. 변경된 비밀번호로 다시 로그인해 주세요.' close={close} />}
                     </Button>
                     </S.FormContainer>
                     <S.StyledHr />

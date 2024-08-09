@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
+
+import LoginHeader from '../../components/LoginComponents/LoginHeader';
+import TitleContainer from '../../components/LoginComponents/TitleContainer';
+
 import * as S from './AddInfoPage.style.jsx';
 
 // 추후 유효성 검사 통과 여부에 따라 글씨 바뀌도록 설정 필요
@@ -12,20 +16,14 @@ export default function AddInfoPage() {
 
     return (
         <main>
-            <S.Header>
-                <Icon id='logo' width='283.65px' height='39.93px' />
-            </S.Header>
+            <LoginHeader />
             <S.Wrapper>
                 <S.Container>
                     <S.FormWrapper>
-                        <S.TitleContainer>
-                            {/* 경고 모달 달기 */}
-                            <Link to={'/login'}>
-                                <Icon id='back' width='35px' height='35px' />
-                            </Link>
-                            <S.TitleText>추가 정보 입력</S.TitleText> 
-                            <S.Spacer />
-                        </S.TitleContainer>
+                        <TitleContainer
+                            backIcon='true'
+                            titleText='추가 정보 입력'
+                        />
                         <S.FormContainer onSubmit={handleSubmit}>
                             <S.MainBoldText>회원 정보</S.MainBoldText>
                             <S.StyledHr />
