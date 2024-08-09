@@ -1,5 +1,4 @@
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
 
 import useModal from '../../hooks/useModal.jsx';
 

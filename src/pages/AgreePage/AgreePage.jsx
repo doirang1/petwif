@@ -25,6 +25,7 @@ export default function AgreePage() {
                 <S.Container>
                 <S.FormWrapper>
                     <TitleContainer
+                    to='/signup'
                     backIcon='true'
                     titleText='이용 약관'
                     />

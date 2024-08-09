@@ -24,6 +24,7 @@ export default function SetNicknamePage() {
                 <S.Container>
                     <S.FormWrapper>
                         <TitleContainer
+                        to='/agree'
                         backIcon='true'
                         titleText='프로필'
                         />
