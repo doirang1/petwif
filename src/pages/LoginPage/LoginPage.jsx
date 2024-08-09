@@ -3,8 +3,6 @@ import { Icon } from '../../components/Icon';
 
 import useCheckIcon from '../../hooks/useCheckIcon.jsx';
 
-import CheckIcon from '../../components/LoginComponents/CheckIcon';
-
 import * as S from './LoginPage.style.jsx';
 
 export default function LoginPage() {
@@ -44,7 +42,6 @@ export default function LoginPage() {
                             />
                         </S.InputContainer>
                         <S.AutoLoginContainer>
-                            {/* <CheckIcon onClick={checking} isChecked={isChecked}/> */}
                             <Icon id={isChecked ? 'check' : 'uncheck'} width='35px' height='35px' onClick={checking}/>
                             <span>자동 로그인</span> 
                         </S.AutoLoginContainer>

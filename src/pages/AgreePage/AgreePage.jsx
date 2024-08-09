@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Icon } from '../../components/Icon';
 
+import useCheckIcon from '../../hooks/useCheckIcon.jsx';
+
 import LoginHeader from '../../components/LoginComponents/LoginHeader';
 import TitleContainer from '../../components/LoginComponents/TitleContainer';
 
@@ -13,6 +15,8 @@ import * as S from './AgreePage.style.jsx';
 
 
 export default function AgreePage() {
+    const { isChecked, checking } = useCheckIcon();
+
     const handleSubmit = (event) => {
         event.preventDefault(); 
         // 여기에 코드 추가
@@ -35,7 +39,7 @@ export default function AgreePage() {
                     </S.ExplainContainer>
                     <S.FormContainer onSubmit={handleSubmit}>
                         <S.AllAgreeContainer>
-                            <Icon id='check' width='35px' height='35px' />
+                            <Icon id={isChecked ? 'check' : 'uncheck'} width='35px' height='35px' onClick={checking}/>
                             <S.GrayText>전체 동의하기</S.GrayText>
                         </S.AllAgreeContainer>
                         <S.StyledHr />
