@@ -1,6 +1,6 @@
 import { Button } from '../../components/Button';
 
-import useModal from '../../hooks/useModal.jsx';
+import useLoginModal from '../../hooks/useLoginModal.jsx';
 
 import LoginHeader from '../../components/LoginComponents/LoginHeader';
 import TitleContainer from '../../components/LoginComponents/TitleContainer';
@@ -9,7 +9,7 @@ import * as S from './PwdChangePage.style.jsx';
 
 
 export default function PwdChangePage() {
-    const { isOpen, open, close, Modal } = useModal();
+    const { isOpen, open, close, LoginModal } = useLoginModal();
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
@@ -60,6 +60,10 @@ export default function PwdChangePage() {
                     </S.FormWrapper>
                 </S.Container>     
             </S.Wrapper>          
+            {isOpen && <LoginModal 
+                type='backToLogin'
+                close={close} 
+            />}         
         </main>
     );
 }

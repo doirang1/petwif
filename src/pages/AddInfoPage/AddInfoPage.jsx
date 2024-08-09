@@ -21,6 +21,7 @@ export default function AddInfoPage() {
                 <S.Container>
                     <S.FormWrapper>
                         <TitleContainer
+                            to='setNickname'
                             backIcon='true'
                             titleText='추가 정보 입력'
                         />

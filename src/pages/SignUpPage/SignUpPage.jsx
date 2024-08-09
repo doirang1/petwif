@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
 
-import useModal from '../../hooks/useModal.jsx';
+import useLoginModal from '../../hooks/useLoginModal.jsx';
 
 import LoginHeader from '../../components/LoginComponents/LoginHeader';
 import TitleContainer from '../../components/LoginComponents/TitleContainer';
@@ -12,7 +11,7 @@ import * as S from './SignUpPage.style.jsx';
 
 // 추후 유효성 검사 통과 여부에 따라 글씨 바뀌도록 설정 필요
 export default function SignUpPage() {
-    const { isOpen, open, close, Modal } = useModal();
+    const { isOpen, open, close, LoginModal } = useLoginModal();
 
     const handleSubmit = (event) => {
         event.preventDefault(); 
@@ -106,19 +105,22 @@ export default function SignUpPage() {
                             </Link>
                         </S.FormContainer>
                     </S.FormWrapper>
-                    <Link to='/login'>
                         <Button
                             width='537px'
                             padding='20px'
                             borderRadius='0'
                             buttonStyle='light'
                             hasBorder='true'
+                            onClick={open}
                         >
                             계정이 있으신가요? 로그인
                         </Button>
-                    </Link>
-                </S.Container>       
-            </S.Wrapper>          
+                </S.Container>   
+            </S.Wrapper>  
+            {isOpen && <LoginModal 
+                type='warning'
+                close={close} 
+            />}            
         </main>
     );
 }
