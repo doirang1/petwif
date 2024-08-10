@@ -1,4 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
+// axios 설치 yarn dev
+
+import axios from 'axios'
+
+import { mockPostSignup } from '../../dummy/data/user.js';
 
 import { Button } from '../../components/Button';
 
@@ -13,10 +20,81 @@ import * as S from './SignUpPage.style.jsx';
 export default function SignUpPage() {
     const { isOpen, open, close, LoginModal } = useLoginModal();
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); 
-        // 여기에 코드 추가
-    };
+    const [email, setEmail] = useState("");
+    const [pwd, setPwd] = useState("");
+    const [pwdRe, setPwdRe] = useState("");
+    
+    const [isRightEmail, setIsRightEmail] = useState(false);
+    const [isRightPwd, setIsRightPwd] = useState(false);
+    const [isRightPwdRe, setIsRightPwdRe] = useState(false);
+    
+    const validateEmail = (value) => /\S+@\S+\.\S+/.test(value);
+    const validatePassword = (value) => value.length >= 4 && value.length <= 12 && /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_])./.test(value);
+    const validatePasswordRe = (value) => value === pwd;
+
+    const [emailError, setEmailError] = useState("");
+    const [pwdError, setPwdError] = useState("");
+    const [pwdReError, setPwdReError] = useState("");
+    
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+    
+        switch (id) {
+            case "e-mail":
+                setEmail(value);
+                const isValidEmail = validateEmail(value);
+                setIsRightEmail(isValidEmail);
+                setEmailError(isValidEmail ? "올바른 양식입니다!" : "올바른 양식이 아닙니다");
+                break;
+                case "pwd":
+                    setPwd(value);
+                    setIsRightPwd(validatePassword(value));
+                    setIsRightPwdRe(validatePasswordRe(pwdRe));
+                    const isValidPwd = validatePassword(value);
+                    setIsRightPwd(isValidPwd);
+                    if (value.length < 4 || value.length > 12) { 
+                        if (value.length < 4) {
+                            setPwdError("비밀번호를 4자리 이상 입력해 주세요");
+                            break;
+                        }
+                        else if (value.length > 12) { setPwdError("비밀번호는 12자리까지 입력 가능합니다");
+                            break;
+                        }
+                    }
+                    if (!(/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_])/.test(value))) {
+                        setPwdError("영어, 숫자, 특수문자를 모두 조합해서 비밀번호를 작성해 주세요 ");
+                        break;
+                    }
+                    else setPwdError("올바른 양식입니다!");
+                    break;
+                case "pwdRe":
+                    setPwdRe(value);
+                    const isValidPwdRe = validatePasswordRe(value);
+                    setIsRightPwdRe(isValidPwdRe);
+                    setPwdReError(isValidPwdRe ? "비밀번호가 일치합니다!" : "비밀번호가 일치하지 않습니다");
+                    break;
+                default:
+                    break;
+            }
+        };
+        
+        const navigate = useNavigate();
+        const formData = { email: email, password: pwd, passwordCheck: pwdRe };
+        
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+    
+            if (!(isRightEmail && isRightPwd && isRightPwdRe)) 
+                return;
+
+            try {
+                console.log("Form data submitted:", formData);
+                await mockPostSignup(formData);
+                navigate('/agree');
+              } catch (error) {
+                console.error('Error:', error.message);
+              }
+        };
 
     return (
         <main>
@@ -43,10 +121,17 @@ export default function SignUpPage() {
                                 <S.InputContainer>
                                     <S.MainBoldText>이메일</S.MainBoldText>
                                     <S.InputStyle 
+                                        id="e-mail"
                                         type='text'
                                         className='email' 
                                         placeholder='이메일을 입력해 주세요'
+                                        onChange={handleInputChange}
                                     />
+                                    {/* 경고 메시지 css상 위치 여기가 맞는지? */}
+                                    <S.WarningText 
+                                        className={isRightEmail ? 'success' : 'error'}>
+                                            {emailError}
+                                    </S.WarningText>
                                 </S.InputContainer>
                                 <Button
                                     width='150px'
@@ -77,32 +162,43 @@ export default function SignUpPage() {
                                 <S.InputContainer>
                                     <S.MainBoldText>비밀번호</S.MainBoldText>
                                     <S.InputStyle 
-                                        type='text'
+                                        id="pwd"
+                                        type='password'
                                         className='pwd' 
                                         placeholder='비밀번호를 입력해 주세요'
+                                        onChange={handleInputChange}
                                     />
+                                    <S.WarningText 
+                                        className={isRightPwd ? 'success' : 'error'}>
+                                            {pwdError}
+                                    </S.WarningText>
                                 </S.InputContainer>
                             </S.InputWrapper>
                             <S.InputWrapper>
                                 <S.InputContainer>
                                     <S.MainBoldText>비밀번호 확인</S.MainBoldText>
                                     <S.InputStyle 
-                                        type='text'
-                                        className='pwd-re' 
+                                        id="pwdRe"
+                                        type='password'
+                                        className='pwdRe' 
                                         placeholder='위의 비밀번호를 다시 입력해 주세요'
+                                        onChange={handleInputChange}
                                     />
+                                    <S.WarningText 
+                                        className={isRightPwdRe ? 'success' : 'error'}>
+                                            {pwdReError}
+                                    </S.WarningText>
                                 </S.InputContainer>
                             </S.InputWrapper>
                             <br />
-                            <Link to='/agree'>
                                 <Button
+                                    type='submit'
                                     width='100%'
                                     padding='15px'
                                     buttonStyle='gray'
                                 >
                                     가입 완료
                                 </Button>
-                            </Link>
                         </S.FormContainer>
                     </S.FormWrapper>
                         <Button

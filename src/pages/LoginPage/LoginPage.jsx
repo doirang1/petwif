@@ -36,7 +36,7 @@ export default function LoginPage() {
                         <S.InputContainer>
                             <S.MainBoldText>비밀번호</S.MainBoldText>
                             <S.InputStyle 
-                                type='text'
+                                type='password'
                                 className='password' 
                                 placeholder='비밀번호를 입력해 주세요'
                             />
