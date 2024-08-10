@@ -133,11 +133,12 @@ export const UnderlinedText = styled(Link)`
 export const WarningText = styled.span`
   &.error {
     color: red;
+    display: block;
   }
   &.success {
     color: #F87F28;
   }
-    
+  
   font-size: 14px;
   font-weight: 400;
   margin-top: 5px;

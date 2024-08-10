@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-// axios 설치 yarn dev
-
-import axios from 'axios'
-
 import { mockPostSignup } from '../../dummy/data/user.js';
 
 import { Button } from '../../components/Button';
@@ -46,12 +42,12 @@ export default function SignUpPage() {
                 setIsRightEmail(isValidEmail);
                 setEmailError(isValidEmail ? "올바른 양식입니다!" : "올바른 양식이 아닙니다");
                 break;
-                case "pwd":
-                    setPwd(value);
-                    setIsRightPwd(validatePassword(value));
-                    setIsRightPwdRe(validatePasswordRe(pwdRe));
-                    const isValidPwd = validatePassword(value);
-                    setIsRightPwd(isValidPwd);
+            case "pwd":
+                setPwd(value);
+               setIsRightPwd(validatePassword(value));
+                setIsRightPwdRe(validatePasswordRe(pwdRe));
+                const isValidPwd = validatePassword(value);
+                setIsRightPwd(isValidPwd);
                     if (value.length < 4 || value.length > 12) { 
                         if (value.length < 4) {
                             setPwdError("비밀번호를 4자리 이상 입력해 주세요");
@@ -127,7 +123,7 @@ export default function SignUpPage() {
                                         placeholder='이메일을 입력해 주세요'
                                         onChange={handleInputChange}
                                     />
-                                    {/* 경고 메시지 css상 위치 여기가 맞는지? */}
+                                    {/* css 위치 조정 */}
                                     <S.WarningText 
                                         className={isRightEmail ? 'success' : 'error'}>
                                             {emailError}

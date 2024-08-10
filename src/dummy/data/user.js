@@ -1,47 +1,49 @@
 let users = [
   {
     id: '1',
-    name: '김용민',
-    email: 'dydals3440@gmail.com',
+    name: '임도이',
+    email: 'doirang1@gmail.com',
     age: '24',
-    username: 'dydals3440',
-    password: '$2a$12$ndKutlx7uVUq4bNYTbQvNevyoZDTH5bVIy.jFlpB7sqewn3wQudzG',
+    username: 'doirang1',
+    password: 'qaz121!',
   },
   {
     id: '2',
-    name: 'Elon Musk',
+    name: '일론 머스크',
     email: 'elone@gmail.com',
     age: '45',
     username: 'elonmusk1004',
-    password: '$2a$12$ndKutlx7uVUq4bNYTbQvNevyoZDTH5bVIy.jFlpB7sqewn3wQudzG',
+    password: 'elon1004!',
   },
 ];
 
 export const mockPostSignup = async (formData) => {
-  // 모의 데이터 확인
+  // 회원가입 - 더미 데이터 확인
   const existingUser = users.find((user) => user.email === formData.email);
   if (existingUser) {
+    // 이미 정보가 존재하는 경우 후에 로그인 페이지로 가도록 연결해야 할 듯
     throw new Error('User already exists');
   }
-  // 여기서 실제로 사용자 등록 로직을 수행합니다.
+
   users.push({
     ...formData,
-    id: formData.email,
-    password: formData.password, // 암호화는 제외
+    email: formData.email,
+    password: formData.password, 
   });
-  return { id: formData.email };
+  return { email: formData.email };
 };
 
-// export async function findByUsername(username) {
-//   return users.find((user) => user.username === username);
-// }
+export const mockPostLogin = async (formData) => {
+  // 로그인 - 이메일과 비밀번호 확인
+  const user = users.find((user) => user.email === formData.email);
+  if (!user) {
+    throw new Error('User not found');
+  }
 
-// export async function findById(id) {
-//   return users.find((user) => user.id === id);
-// }
+  // 비밀번호 확인
+  if (user.password !== formData.password) {
+    throw new Error('Incorrect password');
+  }
 
-// export async function createUser(user) {
-//   const created = { ...user, id: Date.now().toString() };
-//   users.push(created);
-//   return created.id;
-// }
+  return { email: user.email, name: user.name };
+};
