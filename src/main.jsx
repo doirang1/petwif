@@ -19,6 +19,7 @@ import { AgreePage } from './pages/AgreePage';
 import { SetNicknamePage } from './pages/SetNicknamePage';
 import { AddInfoPage } from './pages/AddInfoPage';
 import { RegisteredPage } from './pages/RegisteredPage';
+import AlbumMakingPage from './pages/AlbumMakingPage/AlbumMakingPage';
 
 import './index.css';
 
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: '/album/post',
         element: <AlbumPostPage />,
+      },
+      {
+        path: '/album-create',
+        element: <AlbumMakingPage />, // AlbumMakingPage 경로 추가
       },
       {
         path: '/friend',

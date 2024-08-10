@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
-import { Profile } from '../../components/Profile';
+import { Avatar } from '../../components/Avatar';
 
 import { Profile as Img } from '../../dummy/images';
 
@@ -28,7 +27,7 @@ export default function SetNicknamePage() {
                         backIcon='true'
                         titleText='프로필'
                         />
-                        <Profile src={Img} size='212px' />
+                        <Avatar src={Img} size='212px' />
                         <S.FormContainer onSubmit={handleSubmit}>
                             <S.MainBoldText>닉네임</S.MainBoldText>
                             <S.MainNormalText>

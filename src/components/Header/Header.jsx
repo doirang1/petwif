@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Flex } from '../Common';
 import { Icon } from '../Icon';
-import { Profile } from '../Profile';
+import { Avatar } from '../Avatar';
 import { Sidebar } from '../Sidebar';
 
 import { Profile as Img } from '../../dummy/images';
@@ -35,7 +35,7 @@ export default function Header() {
             <span>사용자 관리</span>
           </S.MenuItem>
           <S.MenuItem>
-            <Profile src={Img} size='37px' />
+            <Avatar src={Img} size='37px' />
           </S.MenuItem>
         </Flex>
       </S.HeaderContainer>
