@@ -4,12 +4,7 @@ import { Icon } from '../Icon';
 
 import * as S from './TitleContainer.style.jsx';
 
-export default function TitleContainer({ 
-  to,
-  backIcon,
-  modal,
-  titleText,
-}) {
+export default function TitleContainer({ to, backIcon, modal, titleText }) {
   return (
     <S.TitleContainer
       // 디자인 팀에 물어보고, $to 추가해서 링크 바꿔야 하면 바꿀 것
@@ -21,9 +16,11 @@ export default function TitleContainer({
         <Link to={to || '/login'}>
           <Icon id='back' width='35px' height='35px' />
         </Link>
-      ) : ""}
-      <S.TitleText>{titleText}</S.TitleText> 
-      {backIcon ? <S.Spacer /> : ""}
+      ) : (
+        ''
+      )}
+      <S.TitleText>{titleText}</S.TitleText>
+      {backIcon ? <S.Spacer /> : ''}
     </S.TitleContainer>
   );
 }

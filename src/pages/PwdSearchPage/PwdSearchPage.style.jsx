@@ -4,18 +4,17 @@ import styled from 'styled-components';
 
 import { Flex } from '../../components/Common';
 
-
-export const Header = styled(Flex)` 
+export const Header = styled(Flex)`
   height: 95px;
   width: 100%;
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.color.white};
-  border: 1px solid  ${(props) => props.theme.color.gray3};
+  border: 1px solid ${(props) => props.theme.color.gray3};
 `;
 
-// 페이지 전체 
-export const Wrapper = styled(Flex)` 
+// 페이지 전체
+export const Wrapper = styled(Flex)`
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -24,7 +23,7 @@ export const Wrapper = styled(Flex)`
   padding: 100px;
 `;
 
-export const Container = styled.div` 
+export const Container = styled.div`
   width: 537px;
   height: 728px;
   display: flex;
@@ -60,7 +59,7 @@ export const UnderlinedText = styled(Link)`
 export const WarningText = styled.span`
   font-weight: 400;
   margin-top: 5px;
-  color: #EC221F;
+  color: #ec221f;
 `;
 
 export const StyledHr = styled.hr`
@@ -76,7 +75,7 @@ export const FormWrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fff;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
   padding: 37.5px;
   display: flex;
   align-items: center;
@@ -101,23 +100,23 @@ export const InputWrapper = styled.div`
   gap: 0 10px;
   display: flex;
   flex-direction: flex-inline;
-  align-items: center; 
+  align-items: center;
   justify-content: space-evenly;
 `;
 
 // MainBoldText, (MainBoldText,) InputStyle을 묶는 컨테이너
 export const InputContainer = styled.div`
   display: flex;
-  width: 100%;  
+  width: 100%;
   gap: 5px;
   justify-content: flex-start;
   flex-direction: column;
 `;
 
 export const InputStyle = styled.input`
- width: ${(props) => props.$width || '100%'}; 
+  width: ${(props) => props.$width || '100%'};
   height: 56px;
-  margin-top: 5px; 
+  margin-top: 5px;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -126,8 +125,7 @@ export const InputStyle = styled.input`
 `;
 
 export const TimerDisplay = styled.div`
-    font-size: 20px;
-    align-self: center;
-    color: ${(props) => props.theme.color.primary}
+  font-size: 20px;
+  align-self: center;
+  color: ${(props) => props.theme.color.primary};
 `;
-

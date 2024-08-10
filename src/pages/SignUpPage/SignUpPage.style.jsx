@@ -4,17 +4,17 @@ import styled from 'styled-components';
 
 import { Flex } from '../../components/Common';
 
-export const Header = styled(Flex)` 
+export const Header = styled(Flex)`
   height: 95px;
   width: 100%;
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.color.white};
-  border: 1px solid  ${(props) => props.theme.color.gray3};
+  border: 1px solid ${(props) => props.theme.color.gray3};
 `;
 
 // 페이지 전체
-export const Wrapper = styled(Flex)` 
+export const Wrapper = styled(Flex)`
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -25,7 +25,7 @@ export const Wrapper = styled(Flex)`
 `;
 
 // 가운데 블럭 전체
-export const Container = styled(Flex)` 
+export const Container = styled(Flex)`
   width: 537px;
   height: 728px;
   display: flex;
@@ -36,12 +36,12 @@ export const Container = styled(Flex)`
 `;
 
 // 하단의 로그인 버튼을 제외한 폼 부분
-export const FormWrapper = styled(Flex)` 
+export const FormWrapper = styled(Flex)`
   width: 100%;
   height: 100%;
   gap: 20px;
   background-color: #fff;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
   padding: 37.5px;
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@ export const FormWrapper = styled(Flex)`
 `;
 
 // 정보 입력이 필요한 실질 폼 부분
-export const FormContainer = styled.form` 
+export const FormContainer = styled.form`
   height: 100%;
   width: 100%;
   justify-content: flex-start;
@@ -58,13 +58,13 @@ export const FormContainer = styled.form`
   overflow: auto;
 
   ::-webkit-scrollbar {
-        display: none;
+    display: none;
   }
 
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
 
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 `;
 
 // MainBoldText, (MainBoldText,) InputStyle, Button을 묶는 컨테이너
@@ -81,7 +81,7 @@ export const InputWrapper = styled.div`
 // MainBoldText, (MainBoldText,) InputStyle을 묶는 컨테이너
 export const InputContainer = styled.div`
   display: flex;
-  width: 100%;  
+  width: 100%;
   gap: 5px;
   justify-content: flex-start;
   flex-direction: column;
@@ -91,7 +91,7 @@ export const InputContainer = styled.div`
 export const InputStyle = styled.input`
   width: 100%;
   height: 56px;
-  margin-top: 5px; 
+  margin-top: 5px;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -136,9 +136,9 @@ export const WarningText = styled.span`
     display: block;
   }
   &.success {
-    color: #F87F28;
+    color: #f87f28;
   }
-  
+
   font-size: 14px;
   font-weight: 400;
   margin-top: 5px;

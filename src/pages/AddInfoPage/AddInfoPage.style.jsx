@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 import { Flex } from '../../components/Common';
 
-
 // 페이지 전체
-export const Wrapper = styled(Flex)` 
+export const Wrapper = styled(Flex)`
   height: 100%;
   width: 100%;
   justify-content: center;
@@ -17,7 +16,7 @@ export const Wrapper = styled(Flex)`
 `;
 
 // 가운데 블럭 전체
-export const Container = styled(Flex)` 
+export const Container = styled(Flex)`
   width: 537px;
   height: 728px;
   display: flex;
@@ -28,12 +27,12 @@ export const Container = styled(Flex)`
 `;
 
 // 하단의 로그인 버튼을 제외한 폼 부분
-export const FormWrapper = styled(Flex)` 
+export const FormWrapper = styled(Flex)`
   width: 100%;
   height: 100%;
   gap: 20px;
   background-color: #fff;
-  border: 1px solid #B4B4B4;
+  border: 1px solid #b4b4b4;
   padding: 37.5px;
   display: flex;
   align-items: center;
@@ -43,7 +42,7 @@ export const FormWrapper = styled(Flex)`
 
 // 정보 입력이 필요한 실질 폼 부분
 // SignUpPage에만 스크롤 들어가 있음
-export const FormContainer = styled.form` 
+export const FormContainer = styled.form`
   height: 100%;
   width: 100%;
   justify-content: flex-start;
@@ -51,13 +50,13 @@ export const FormContainer = styled.form`
   overflow: auto;
 
   ::-webkit-scrollbar {
-        display: none;
+    display: none;
   }
 
   scrollbar-width: none;
   scrollbar-color: transparent transparent;
 
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 `;
 
 // MainBoldText, (MainBoldText,) InputStyle, Button을 묶는 컨테이너
@@ -74,7 +73,7 @@ export const InputWrapper = styled.div`
 // MainBoldText, (MainBoldText,) InputStyle을 묶는 컨테이너
 export const InputContainer = styled.div`
   display: flex;
-  width: 100%;  
+  width: 100%;
   gap: 5px;
   justify-content: flex-start;
   flex-direction: column;
@@ -84,7 +83,7 @@ export const InputContainer = styled.div`
 export const InputStyle = styled.input`
   width: ${(props) => props.$width || '100%'};
   height: ${(props) => props.$height || '56px'};
-  margin-top: 5px; 
+  margin-top: 5px;
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -126,15 +125,15 @@ export const UnderlinedText = styled(Link)`
 export const WarningText = styled.span`
   font-weight: 400;
   margin-top: 5px;
-  color: #EC221F;
+  color: #ec221f;
 `;
 
 export const SelectStyle = styled.select`
-    width: ${props => props.$width || 'auto'};
-    margin-top: 5px; 
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    color: ${(props) => props.theme.color.gray1};
-    background: ${(props) => props.theme.color.gray5};
+  width: ${(props) => props.$width || 'auto'};
+  margin-top: 5px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  color: ${(props) => props.theme.color.gray1};
+  background: ${(props) => props.theme.color.gray5};
 `;

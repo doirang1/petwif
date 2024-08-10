@@ -28,7 +28,7 @@ export const mockPostSignup = async (formData) => {
   users.push({
     ...formData,
     email: formData.email,
-    password: formData.password, 
+    password: formData.password,
   });
   return { email: formData.email };
 };

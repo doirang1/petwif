@@ -5,10 +5,7 @@ import { Button } from '../Button';
 
 import * as S from './LoginModal.style.jsx';
 
-export default function LoginModal({ 
-  type,
-  close,
-}) {
+export default function LoginModal({ type, close }) {
   return (
     <S.ModalLayout>
       <S.Modal>

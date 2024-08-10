@@ -36,6 +36,6 @@ export const Text = styled.p`
 export const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;   
+  flex-direction: column;
   gap: 10px;
 `;
