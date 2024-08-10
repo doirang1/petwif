@@ -110,18 +110,16 @@ export default function SignUpPage() {
             <TitleContainer backIcon='true' titleText='회원 가입' />
             <S.FormContainer onSubmit={handleSubmit}>
               <S.InputWrapper>
-                <S.InputContainer>
-                  <S.MainBoldText>이름</S.MainBoldText>
-                  <S.InputStyle
-                    type='text'
-                    className='name'
-                    placeholder='이름을 입력해 주세요'
-                  />
-                </S.InputContainer>
+                <S.MainBoldText>이름</S.MainBoldText>
+                <S.InputStyle
+                  type='text'
+                  className='name'
+                  placeholder='이름을 입력해 주세요'
+                />
               </S.InputWrapper>
               <S.InputWrapper>
+                <S.MainBoldText>이메일</S.MainBoldText>
                 <S.InputContainer>
-                  <S.MainBoldText>이메일</S.MainBoldText>
                   <S.InputStyle
                     id='e-mail'
                     type='text'
@@ -129,57 +127,53 @@ export default function SignUpPage() {
                     placeholder='이메일을 입력해 주세요'
                     onChange={handleInputChange}
                   />
-                  {/* css 위치 조정 */}
-                  <S.WarningText className={isRightEmail ? 'success' : 'error'}>
-                    {emailError}
-                  </S.WarningText>
+                  <Button width='150px' padding='13.7px' buttonStyle='gray'>
+                    인증번호 전송
+                  </Button>
                 </S.InputContainer>
-                <Button width='150px' padding='15px' buttonStyle='gray'>
-                  인증번호 전송
-                </Button>
+                {/* css 위치 조정 */}
+                <S.WarningText className={isRightEmail ? 'success' : 'error'}>
+                  {emailError}
+                </S.WarningText>
               </S.InputWrapper>
               <S.InputWrapper>
+                <S.MainBoldText>인증번호 입력</S.MainBoldText>
                 <S.InputContainer>
-                  <S.MainBoldText>인증번호 입력</S.MainBoldText>
                   <S.InputStyle
                     type='text'
                     className='certification'
                     placeholder='인증번호를 입력해 주세요'
                   />
-                </S.InputContainer>
-                <Button width='150px' padding='15px' buttonStyle='gray'>
-                  인증번호 확인
-                </Button>
-              </S.InputWrapper>
-              <S.InputWrapper>
-                <S.InputContainer>
-                  <S.MainBoldText>비밀번호</S.MainBoldText>
-                  <S.InputStyle
-                    id='pwd'
-                    type='password'
-                    className='pwd'
-                    placeholder='비밀번호를 입력해 주세요'
-                    onChange={handleInputChange}
-                  />
-                  <S.WarningText className={isRightPwd ? 'success' : 'error'}>
-                    {pwdError}
-                  </S.WarningText>
+                  <Button width='150px' padding='13.7px' buttonStyle='gray'>
+                    인증번호 확인
+                  </Button>
                 </S.InputContainer>
               </S.InputWrapper>
               <S.InputWrapper>
-                <S.InputContainer>
-                  <S.MainBoldText>비밀번호 확인</S.MainBoldText>
-                  <S.InputStyle
-                    id='pwdRe'
-                    type='password'
-                    className='pwdRe'
-                    placeholder='위의 비밀번호를 다시 입력해 주세요'
-                    onChange={handleInputChange}
-                  />
-                  <S.WarningText className={isRightPwdRe ? 'success' : 'error'}>
-                    {pwdReError}
-                  </S.WarningText>
-                </S.InputContainer>
+                <S.MainBoldText>비밀번호</S.MainBoldText>
+                <S.InputStyle
+                  id='pwd'
+                  type='password'
+                  className='pwd'
+                  placeholder='비밀번호를 입력해 주세요'
+                  onChange={handleInputChange}
+                />
+                <S.WarningText className={isRightPwd ? 'success' : 'error'}>
+                  {pwdError}
+                </S.WarningText>
+              </S.InputWrapper>
+              <S.InputWrapper>
+                <S.MainBoldText>비밀번호 확인</S.MainBoldText>
+                <S.InputStyle
+                  id='pwdRe'
+                  type='password'
+                  className='pwdRe'
+                  placeholder='위의 비밀번호를 다시 입력해 주세요'
+                  onChange={handleInputChange}
+                />
+                <S.WarningText className={isRightPwdRe ? 'success' : 'error'}>
+                  {pwdReError}
+                </S.WarningText>
               </S.InputWrapper>
               <br />
               <Button

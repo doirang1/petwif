@@ -118,9 +118,15 @@ export const UnderlinedText = styled(Link)`
   color: ${(props) => props.theme.color.gray2};
 `;
 
-// 경고 문구 -> 유효성 검사로 그린, 레드 바뀌게 할 것
 export const WarningText = styled.span`
+  &.error {
+    color: red;
+  }
+  &.success {
+    color: #f87f28;
+  }
+
+  font-size: 14px;
   font-weight: 400;
-  margin: 5px 0;
-  color: #ec221f;
+  margin-top: 5px;
 `;
