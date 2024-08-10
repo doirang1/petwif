@@ -88,8 +88,8 @@ export const InputStyle = styled.input`
   padding: 15px;
   border: none;
   border-radius: 10px;
-  color: ${(props) => props.theme.color.gray3};
-  background: ${(props) => props.theme.color.gray4};
+  color: ${(props) => props.theme.color.gray1};
+  background: ${(props) => props.theme.color.gray5};
 `;
 
 // back 아이콘과 TitleText, Spacer를 묶는 컨테이너

@@ -64,8 +64,8 @@ export const InputStyle = styled.input`
   padding: 15px;
   border: none;
   border-radius: 10px;
-  color: ${(props) => props.theme.color.gray3};
-  background: ${(props) => props.theme.color.gray4};
+  color: ${(props) => props.theme.color.gray1};
+  background: ${(props) => props.theme.color.gray5};
 `;
 
 // 구분선 스타일링
