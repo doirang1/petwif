@@ -26,8 +26,8 @@ export const Wrapper = styled(Flex)`
 
 // 가운데 블럭 전체
 export const Container = styled(Flex)`
-  width: 537px;
-  height: 728px;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,11 +91,12 @@ export const InputContainer = styled.div`
 // input
 export const InputStyle = styled.input`
   width: 100%;
-  height: 56px;
+  height: 50px;
   margin-top: 5px;
   padding: 15px;
   border: none;
   border-radius: 10px;
+  // line-height: 0;
   color: ${(props) => props.theme.color.gray1};
   background: ${(props) => props.theme.color.gray5};
 `;

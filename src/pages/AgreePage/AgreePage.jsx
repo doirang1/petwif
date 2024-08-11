@@ -41,10 +41,9 @@ export default function AgreePage() {
                 있습니다.
               </S.MainNormalText>
             </S.ExplainContainer>
-            <S.FormContainer onSubmit={handleSubmit}>
-              <S.AllAgreeContainer>
+            <S.AllAgreeContainer>
                 <Icon
-                  id={isChecked ? 'check' : 'uncheck'}
+                  id={isChecked ? 'checked' : 'unchecked'}
                   width='35px'
                   height='35px'
                   onClick={checking}
@@ -52,6 +51,7 @@ export default function AgreePage() {
                 <S.GrayText>전체 동의하기</S.GrayText>
               </S.AllAgreeContainer>
               <S.StyledHr />
+            <S.FormContainer onSubmit={handleSubmit}>
               <S.ServiceTermWrapper>
                 <S.TermTitleContainer>
                   <S.GrayText>[필수] 서비스 이용 약관</S.GrayText>
@@ -63,7 +63,6 @@ export default function AgreePage() {
               </S.ServiceTermWrapper>
               <S.ServiceTermWrapper>
                 <S.TermTitleContainer>
-                  {/* span 컬러 바꾸기 -> props로 받아 올 수 없나? */}
                   <S.GrayText>[필수] 개인정보 처리 약관</S.GrayText>
                   <input type='checkbox' />
                 </S.TermTitleContainer>

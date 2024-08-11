@@ -94,7 +94,7 @@ export default function PwdSearchPage() {
                 <S.TimerDisplay>{formatTime(timeLeft)}</S.TimerDisplay>
               )}
               <Link to='/changePwd'>
-                <Button width='447px' padding='15px' buttonStyle='gray'>
+                <Button width='100%' padding='15px' buttonStyle='gray'>
                   인증 완료
                 </Button>
               </Link>

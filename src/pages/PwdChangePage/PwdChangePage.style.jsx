@@ -56,24 +56,25 @@ export const FormContainer = styled.form`
   align-items: center;
 `;
 
-// MainBoldText, (MainBoldText,) InputStyle, Button을 묶는 컨테이너
+// MainBoldText, (MainBoldText,) InputStyle, Button을 세로로 묶는 컨테이너
 export const InputWrapper = styled.div`
   width: 100%;
   margin: 5px 0 20px 0;
   gap: 0 10px;
   display: flex;
-  flex-direction: flex-inline;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
-// MainBoldText, (MainBoldText,) InputStyle을 묶는 컨테이너
+// InputStyle, Button을 가로로 묶는 컨테이너
 export const InputContainer = styled.div`
   display: flex;
   width: 100%;
-  gap: 5px;
-  justify-content: flex-start;
-  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: flex-inline;
 `;
 
 // input

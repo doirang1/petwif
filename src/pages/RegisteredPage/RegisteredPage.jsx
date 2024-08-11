@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
-import { Icon } from '../../components/Icon';
-import { Profile } from '../../components/Profile';
+import { Avatar } from '../../components/Avatar';
 
 import { Profile as Img } from '../../dummy/images';
 
@@ -21,7 +20,7 @@ export default function RegisteredPage() {
         <S.Container>
           <S.FormWrapper>
             <TitleContainer titleText='회원가입 완료' />
-            <Profile src={Img} size='212px' />
+            <Avatar src={Img} size='212px' />
             <S.MainBoldText>{nickname} 님</S.MainBoldText>
             <S.StyledHr />
             <S.MainBoldText>새로운 회원이 되신 것을 환영해요!</S.MainBoldText>

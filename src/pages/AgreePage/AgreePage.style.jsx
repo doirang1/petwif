@@ -15,7 +15,7 @@ export const Wrapper = styled(Flex)`
 // 가운데 블럭 전체
 export const Container = styled(Flex)`
   width: 537px;
-  height: 728px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,8 +41,19 @@ export const FormWrapper = styled(Flex)`
 export const FormContainer = styled.form`
   height: 100%;
   width: 100%;
-  justify-content: flex-start;
+  padding: 0 10px;
+  justify-content: space-evenly;
   align-items: center;
+  overflow: auto;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: 1;
+  scrollbar-color: orange transparent;
+
+  -ms-overflow-style: none;
 `;
 
 // MainBoldText, (MainBoldText,) InputStyle을 묶는 컨테이너
@@ -106,7 +117,8 @@ export const ExplainContainer = styled.div`
 
 // 전체 동의하기
 export const AllAgreeContainer = styled.div`
-  height: 40px;
+  margin-top: 15px;
+  height: 10px;
   width: 100%;
   display: flex;
   flex-direcion: flex-inline;
@@ -125,14 +137,15 @@ export const TermTitleContainer = styled.div`
 
 export const ServiceTermContainer = styled.div`
   width: 100%;
-  height: 86px;
+  height: 200px;
   color: ${(props) => props.theme.color.gray2};
-  background-color: ${(props) => props.theme.color.gray4};
+  background-color: ${(props) => props.theme.color.gray5};
   border: none;
   overflow: auto;
   border-radius: 10px;
   margin: 10px 0;
   padding: 10px;
+  font-size: 13px;
 
   ::-webkit-scrollbar {
     display: none;
@@ -145,7 +158,7 @@ export const ServiceTermContainer = styled.div`
 `;
 
 export const ServiceTermWrapper = styled.div`
-  width: 447px;
-  height: 115px;
-  margin: 30px 0;
+  width: 95%;
+  height: 250px;
+  margin: 10px 5px;
 `;

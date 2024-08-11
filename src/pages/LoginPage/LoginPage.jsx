@@ -108,7 +108,7 @@ export default function LoginPage() {
             </S.InputContainer>
             <S.AutoLoginContainer>
               <Icon
-                id={isChecked ? 'check' : 'uncheck'}
+                id={isChecked ? 'checked' : 'unchecked'}
                 width='35px'
                 height='35px'
                 onClick={checking}
@@ -131,9 +131,9 @@ export default function LoginPage() {
           <S.MainBoldText>간편 로그인</S.MainBoldText>
           <S.SocialLoginWrapper>
             <S.SocialLoginContainer id='kakao' width='62px' height='62px' />
-            <S.SocialLoginContainer id='naver' width='62px' height='62px' />
+            {/* <S.SocialLoginContainer id='naver' width='62px' height='62px' /> */}
             <S.SocialLoginContainer id='apple' width='62px' height='62px' />
-            <S.SocialLoginContainer id='google' width='62px' height='62px' />
+            {/* <S.SocialLoginContainer id='google' width='62px' height='62px' /> */}
           </S.SocialLoginWrapper>
           <S.UnderlinedText to='/signup'>
             아직 회원이 아니시라면?
